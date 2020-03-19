@@ -1,0 +1,53 @@
+﻿1,Access Token Manipulation,APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalation.
+2,Application Access Token,"APT28 has used several malicious applications that abused OAuth access tokens to gain access to target email accounts, including Gmail and Yahoo Mail."
+3,Automated Collection,APT28 used a publicly available tool to gather and compress multiple documents on the DCCC and DNC networks.
+5,Bootkit,APT28 has deployed a bootkit along with Downdelph to ensure its persistence on the victim. The bootkit shares code with some variants of BlackEnergy.
+6,Command-Line Interface,APT28 uses cmd.exe to execute commands and custom backdoors.
+7,Commonly Used Port,APT28 has used port 443 for C2.
+8,Communication Through Removable Media,APT28 uses a tool that captures information from air-gapped computers via an infected USB and transfers it to network-connected computer when the USB is inserted.
+9,Component Object Model Hijacking,APT28 has used COM hijacking for persistence by replacing the legitimate MMDeviceEnumerator object with a payload.
+10,Connection Proxy,"APT28 used other victims as proxies to relay command traffic, for instance using a compromised Georgian military email server as a hop point to NATO victims. The group has also used a tool that acts as a proxy to allow C2 even if the victim is behind a router. APT28 has also used a machine to relay and obscure communications between CHOPSTICK and their server."
+11,Credential Dumping,APT28 regularly deploys both publicly available and custom password retrieval tools on victims.
+12,Custom Cryptographic Protocol,APT28 installed a Delphi backdoor that used a custom algorithm for C2 communications.
+13,Data Compressed,APT28 used a publicly available tool to gather and compress multiple documents on the DCCC and DNC networks.
+14,Data from Information Repositories,APT28 has collected information from Microsoft SharePoint services within target networks.
+15,Data from Local System,"APT28 has retrieved internal documents from machines inside victim environments, including by using Forfiles to stage documents before."
+16,Data from Removable Media,An APT28 backdoor may collect the entire contents of an inserted USB device.
+17,Data Obfuscation,"APT28 added ""junk data"" to each encoded string, preventing trivial decoding without knowledge of the junk removal algorithm. Each implant was given a ""junk length"" value when created, tracked by the controller software to allow seamless communication but prevent analysis of the command protocol on the wire."
+18,Data Staged,APT28 has stored captured credential information in a file named pi.log.
+19,Deobfuscate/Decode Files or Information,An APT28 macro uses the command certutil -decode to decode contents of a .txt file storing the base64 encoded payload.
+20,Dynamic Data Exchange,APT28 has delivered JHUHUGIT and Koadic by executing PowerShell commands through DDE in Word documents.
+21,Email Collection,APT28 has collected emails from victim Microsoft Exchange servers.
+22,Exploitation for Client Execution,APT28 has exploited Microsoft Office vulnerability CVE-2017-0262 for execution.
+23,Exploitation for Defense Evasion,APT28 has used CVE-2015-4902 to bypass security features.
+24,Exploitation for Privilege Escalation,"APT28 has exploited CVE-2014-4076, CVE-2015-2387, CVE-2015-1701, CVE-2017-0263 to escalate privileges."
+25,Exploitation of Remote Services,APT28 exploited a Windows SMB Remote Code Execution Vulnerability to conduct lateral movement.
+26,File and Directory Discovery,"APT28 has used Forfiles to locate PDF, Excel, and Word documents during. The group also searched a compromised DCCC computer for specific terms."
+27,File Deletion,"APT28 has intentionally deleted computer files to cover their tracks, including with use of the program CCleaner."
+28,Hidden Files and Directories,APT28 has saved files with hidden file attributes.
+29,Hidden Window,APT28 has used the WindowStyle parameter to conceal PowerShell windows.
+30,Indicator Removal on Host,"APT28 has cleared event logs, including by using the commands wevtutil cl System and wevtutil cl Security."
+31,Input Capture,APT28 has used tools to perform keylogging.
+32,Logon Scripts,An APT28 loader Trojan adds the Registry key HKCU\Environment\UserInitMprLogonScript to establish persistence.
+34,Network Sniffing,"APT28 deployed the open source tool Responder to conduct NetBIOS Name Service poisoning, which captured usernames and hashed passwords that allowed access to legitimate credentials."
+35,Obfuscated Files or Information,"APT28 encrypted a .dll payload using RTL and a custom encryption algorithm. APT28 has also obfuscated payloads with base64, XOR, and RC4.[13][21][9][18][15]"
+36,Office Application Startup,APT28 has used the Office Test persistence mechanism within Microsoft Office by adding the Registry key HKCU\Software\Microsoft\Office test\Special\Perf to execute code.
+37,Pass the Hash,APT28 has used pass the hash for lateral movement.
+38,Peripheral Device Discovery,APT28 uses a module to receive a notification every time a USB mass storage device is inserted into a victim.
+39,PowerShell,APT28 downloads and executes PowerShell scripts.
+40,Process Discovery,An APT28 loader Trojan will enumerate the victim's processes searching for explorer.exe if its current process does not have necessary permissions.
+41,Remote File Copy,"APT28 has downloaded additional files, including by using a first-stage downloader to contact the C2 server to obtain the second-stage implant."
+42,Replication Through Removable Media,APT28 uses a tool to infect connected USB devices and transmit itself to air-gapped computers when the infected USB device is inserted.
+43,Rootkit,APT28 has used a UEFI (Unified Extensible Firmware Interface) rootkit known as LoJax.
+44,Rundll32,"APT28 executed CHOPSTICK by using rundll32 commands such as rundll32.exe ""C:\Windows\twain_64.dll"". APT28 also executed a .dll for a first stage dropper using rundll32.exe. An APT28 loader Trojan saved a batch script that uses rundll32 to execute a DLL payload."
+45,Screen Capture,APT28 has used tools to take screenshots from victims.
+46,Scripting,An APT28 loader Trojan uses a batch script to run its payload. The group has also used macros to execute payloads.
+47,Spearphishing Attachment,APT28 sent spearphishing emails containing malicious Microsoft Office attachments.
+48,Spearphishing Link,APT28 sent spearphishing emails which used a URL-shortener service to masquerade as a legitimate service and to redirect targets to credential harvesting sites.
+49,Standard Application Layer Protocol,"APT28 used SMTP as a communication channel in various implants, initially using self-registered Google Mail accounts and later compromised email servers of its victims. Later implants such as CHOPSTICK use a blend of HTTP and other legitimate channels, depending on module configuration."
+50,Steal Application Access Token,"APT28 has used several malicious applications to steal user OAuth access tokens including applications masquerading as ""Google Defender"" ""Google Email Protection,"" and ""Google Scanner"" for Gmail users. They also targeted Yahoo users with applications masquerading as ""Delivery Service"" and ""McAfee Email Protection""."
+51,Template Injection,APT28 used weaponized Microsoft Word documents abusing the remote template function to retrieve a malicious macro.
+52,Timestomp,APT28 has performed timestomping on victim files.
+53,Trusted Relationship,"Once APT28 gained access to the DCCC network, the group then proceeded to use that access to compromise the DNC network."
+54,User Execution,APT28 attempted to get users to click on Microsoft Office attachments containing malicious macro scripts.
+55,Valid Accounts,"APT28 has used legitimate credentials to gain initial access, maintain access, and exfiltrate data from a victim network. The group has specifically used credentials stolen through a spearphishing email to login to the DCCC network. The group has also leveraged default manufacturer's passwords to gain initial access to corporate networks via IoT devices such as a VOIP phone, printer, and video decoder."
